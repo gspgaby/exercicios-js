@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inflação</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <p>Dia 24<br>
+                    -tomate 3.3<br>
+                    -arroz 2.99<br>
+                    -cenoura 3.99
+                </p>
+            </th>
+            <th>
+                <p>Dia 30<br>
+                    -tomate 4.7<br>
+                    -arroz 3.25<br>
+                    -cenoura 4.14
+                </p>
+            </th>
+        </tr>
+        
+    </table>
+
+    <script>
+        
+        var tomateinicial = 3.3
+        var tomatefinal = 4.7
+        var arrozinicial = 2.99
+        var arrozfinal = 3.25
+        var cenourainicial = 3.99
+        var cenourafinal = 4.14
+
+        function espaçamento(){
+            document.write("<br>")
+        }
+
+        function calcularInflacaoProdutos(valorInicial, valorFinal){   
+            espaçamento()
+            return (valorFinal - valorInicial) / valorInicial * 100
+        }
+
+        document.write("A inflação do tomate foi " + calcularInflacaoProdutos(tomateinicial, tomatefinal).toFixed(2) + "%.")
+        document.write("A inflação do arroz foi " + calcularInflacaoProdutos(arrozinicial, arrozfinal).toFixed(2) + "%.")
+        document.write("A inflação da cenoura foi " + calcularInflacaoProdutos(cenourainicial, cenourafinal).toFixed(2) + "%.")
+
+        function calcularMediaInflacao(){
+            var inflacaoTomate = calcularInflacaoProdutos(tomateinicial, tomatefinal)  
+            var inflacaoArroz = calcularInflacaoProdutos(arrozinicial, arrozfinal)    
+            var inflacaoCenoura = calcularInflacaoProdutos(cenourainicial, cenourafinal)
+            return (inflacaoTomate + inflacaoArroz + inflacaoCenoura) / 3
+        }
+
+        document.write("A média das inflações é de " + calcularMediaInflacao().toFixed(2) + "%.")
+
+        espaçamento()
+
+        function calcularEstimativaInflacao(valorInicial, valorFinal){
+            espaçamento()
+            return (valorFinal - valorInicial) / 6
+        }
+
+        document.write("A inflação do tomate é de aproximadamente " + calcularEstimativaInflacao(tomateinicial, tomatefinal).toFixed(2) + " centavos por dia.")
+        document.write("A inflação do arroz é de aproximadamente " + calcularEstimativaInflacao(arrozinicial, arrozfinal).toFixed(2) + " centavos por dia.")
+        document.write("A inflação da cenoura é de aproximadamente " + calcularEstimativaInflacao(cenourainicial, cenourafinal).toFixed(2) + " centavos por dia.")
+
+    </script>
+    
+</body>
+</html>

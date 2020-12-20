@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /* Preciso listar a soma de todos os números naturais múltiplos de 3 e 5 menores que um
+determinado valor passado. Por exemplo, se passarmos 10 como valor, os múltiplos são 3, 5, 6 e
+9: a soma desses múltiplos dá 23. Caso o número passado for negativo, preciso que a função
+retorne 0. */
+            var soma = 0
+
+            // var multiplo = prompt("Digite o numero");
+
+            function teste(multiplo) {
+
+                if (multiplo > 0) {
+                    for (var i = 0; i < multiplo; i++) {
+                        if (i % 3 == 0 || i % 5 == 0) {
+                            soma += i;
+
+                        }
+                    }
+
+                    console.log("A soma é: " + soma);
+                } else {
+                    return 0;
+                }
+
+            }
+        </script>
+    </body>
+</html>

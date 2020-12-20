@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+</head>
+<body>
+    <script>
+        var mensagem, mensagemCodificada = '', cifra;
+        mensagem = prompt("Digite a mensagem a ser codificada");
+        cifra = parseInt(prompt("Qual o deslocamento desejado"));
+
+        for (var i = 0, length = mensagem.length; i < length; i++) {
+        mensagemCodificada += String.fromCharCode(mensagem.charCodeAt(i) + cifra);
+        }
+
+        alert(mensagemCodificada);
+    </script>
+</body>
+</html>
